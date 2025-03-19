@@ -6,9 +6,7 @@ class Solution {
         Arrays.sort(temp2);
         String str = new String(temp1);
         String str1 = new String(temp2);
-        if(str.length() != str1.length()){
-            return false;
-        }
+       
         if(str.equals(str1)){
             return true;
         }
