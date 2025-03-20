@@ -1,5 +1,6 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
+        // tatti question
         char temp1[] = s.toCharArray();
         char temp2[] = t.toCharArray();
         Arrays.sort(temp1);
