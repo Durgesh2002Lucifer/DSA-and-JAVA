@@ -1,5 +1,5 @@
 class Solution {
-   /* double solve(double x, long n){
+    double solve(double x, long n){
         if(n==0) return 1;
 
        if(n==1) return x; 
@@ -12,10 +12,10 @@ class Solution {
       }else{
         return half*half*x;
       }
-    }  */
+    }  
     public double myPow(double x, int n) {
        
-       //return solve(x,(long)n);
-       return Math.pow(x,n);
+       return solve(x,(long)n);
+      
     }
 }
