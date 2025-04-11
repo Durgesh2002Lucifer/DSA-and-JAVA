@@ -8,10 +8,10 @@ class Solution {
                 int leftsum = 0;
                 int rightsum = 0;
                 for (int j = 0; j < sb.length() / 2; j++) {
-                    leftsum += sb.charAt(j) - '0';
+                    leftsum += sb.charAt(j) ;
                 }
                 for (int j = sb.length() / 2; j < sb.length(); j++) {
-                    rightsum += sb.charAt(j) - '0';
+                    rightsum += sb.charAt(j);
                 }
                 if (leftsum == rightsum) {
                     count++;
