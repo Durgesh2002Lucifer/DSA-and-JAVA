@@ -1,25 +1,22 @@
 class Solution {
     public int fib(int n) {
-        if (n <= 1) {
+        if(n<=1){
             return n;
         }
-         int[] memo = new int[n + 1];
-         Arrays.fill(memo, -1);
+        int[] dp = new int[n+1];
+        Arrays.fill(dp,-1);
 
-       return nthFibonacci(n,memo);
+        return solve(n,dp);
     }
-
-    public int nthFibonacci(int n, int[] memo) {
-
-       if(n <= 1){
-        return n;
-       }
-       if(memo[n] != -1) {
-            return memo[n];
+    public static int solve(int n, int[]dp){
+        if(n<=1){
+            return n;
+        }
+        if(dp[n]!=-1){
+            return dp[n];
         }
 
-        memo[n] = nthFibonacci(n - 1, memo) + nthFibonacci(n - 2, memo);
-
-        return nthFibonacci(n, memo);
+        dp[n] = solve(n-1,dp)+solve(n-2,dp);
+        return solve(n,dp);
     }
 }
