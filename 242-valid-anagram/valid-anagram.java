@@ -1,5 +1,6 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
+        /*
         char[] c1 = s.toCharArray();
         Arrays.sort(c1);
         char[] c2 = t.toCharArray();
@@ -12,5 +13,22 @@ class Solution {
             return true;
         }
         return false;
+        */
+        int count[] = new int[26];
+
+        for(int i=0;i<s.length();i++){
+            count[s.charAt(i) - 'a']++;
+        }
+
+        for(int i=0;i<t.length();i++){
+            count[t.charAt(i) - 'a']--;
+        }
+        
+        for(int i=0;i<count.length;i++){
+            if(count[i] != 0){
+                return false;
+            }
+        }
+        return true;
     }
 }
